@@ -183,3 +183,40 @@ This accepts a bistatic RCS export from Ansys HFSS and converts it into *.rcs fo
 * Licenses: N/A
 * Other Scripts: N/A
 * Scenario: N/A
+
+
+--
+
+## [OneStepGraphicsSettings.py](OneStepGraphicsSettings.py)
+
+As provided on request by our resident movie making expert, this utility will set various STK properties to optimize the appearance of STK images and videos. No more searching through multiple property's panels to set all these values - you can do it all from this simple to use python script.
+
+## Dependencies
+
+*Licenses: [STK Pro](https://www.ansys.com/content/dam/amp/2022/june/webpage-requests/stk-product-page/brochures/stk-pro-brochure.pdf)
+*Other Scripts: N/A
+*Scenario: N/A
+
+---
+
+## [CustomAdjacentSatRouting.py](CustomAdjacentSatRouting.py)
+
+Ingests information regarding satellite collection/constellation to generate a routing file. This routing file limits each satellite in the constellation to only be able to communicate with neighboring satellites. By using a routing for chain computing, it can cut out unwanted links and shorten computation time.
+
+### Dependencies
+
+* Licenses: N/A
+* Other Scripts: N/A
+* Scenario: N/A
+
+---
+
+## [HFSS_RCS_Complex_Export_AEDTLib.py](HFSS_RCS_Complex_Export_AEDTLib.py)
+
+This script reformats the data exported from AEDT HFSS into a *.rcs file. STK can either take *.csv files or *.rcs files, but the *.csv files have much more requirements, thus, this script uses PyAEDT to pull the data straight from the computed analysis of a radar cross section and outputs a *.rcs file that can readily be put into STK.
+
+### Dependencies
+
+* Licenses: N/A
+* Other Scripts: N/A
+* Scenario: N/A

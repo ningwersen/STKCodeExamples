@@ -97,6 +97,20 @@ Two scripts: 1. A converter that takes in two LK files, one representing magnitu
 
 ---
 
+## [LoadCDM](LoadCDM)
+
+Loads a CDM into STK. Place all 3 files into same folder, edit header of LoadCDM.py to point to your cdm file, run LoadCDM.py
+
+### Dependencies
+
+* Licenses: N/A
+* Other Scripts: N/A
+* Scenario: N/A
+* Third-Party Libraries: STK python API, xml
+
+---
+
+
 ## [SatelliteConflictFreePassesUsingIntervalTree](SatelliteConflictFreePassesUsingIntervalTree)
 
 This script was used in a specific case for a customer: there is a ground facility that is attempting to calculate line of sight access to a constellation of satellites. The customer wants all the passes (pass number, time intervals, satellite name) that are "conflict free", the definition of conflict free being so:
@@ -167,6 +181,28 @@ This script will take the prinicple axes of a covariance matrix and turn it into
 * Other Scripts: N/A
 * Scenario: N/A
 * Third-Party Libraries: numpy
+
+---
+
+## [NumberOfPassesUntilRepeatGroundTrace.ipynb](NumberOfPassesUntilRepeatGroundTrace.ipynb)
+
+Determine the number of passes until the satellite repeats its ground trace. Definiton of pass break should be defined in the satellite's properties; whether it is ascending or descending at the equator. This script loads the Passes data provider. This data provider gives the pass number, latitude at pass break and longitude at pass break, as well as the start and stop times of each pass interval. The latitude at the pass break is ~zero, since the pass break is defined at the equator. Whether the pass break is defined as ascending or descending only depends on the users prefered convention, as the data provider provides passes only at the node where the break is defined. This means that the latitude and longitude rates do not have to be checked for matching direction of pass. The logic implemented checks for a repeating longitude at pass break value. 
+
+User inputs:
+
+The user has to input the name of the satellite, as well as the reference pass number to begin the search from. A reference data frame is displayed so that the user can pick a pass number without having to generate a custom report inside of STK.
+
+Authors:
+
+Sasha Carrico
+Louise Dupont
+
+### Dependencies
+
+* Licenses: [STK Pro](https://www.ansys.com/content/dam/amp/2022/june/webpage-requests/stk-product-page/brochures/stk-pro-brochure.pdf)
+* Other Scripts: N/A
+* Scenario: N/A
+* Third-Party Libraries: numpy, pandas
 
 ---
 
